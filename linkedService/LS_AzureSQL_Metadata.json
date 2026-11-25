@@ -1,0 +1,23 @@
+{
+	"name": "LS_AzureSQL_Metadata",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "ksf-sync.database.windows.net",
+			"database": "sqldb-ksf",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "ksf",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "metadata-db"
+			}
+		}
+	}
+}
