@@ -27,7 +27,8 @@
 					"dataset": {
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
@@ -60,7 +61,7 @@
 							"typeProperties": {
 								"variableName": "test",
 								"value": {
-									"value": "@item().table_id",
+									"value": "@string(item().table_id)",
 									"type": "Expression"
 								}
 							}
